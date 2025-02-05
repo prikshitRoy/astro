@@ -13,6 +13,7 @@ const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "Writing Docs"];
 const happy = true;
 const finished = false;
 const goal = 1;
+const skillColor = "navy";
 ---
 
 <!DOCTYPE html>
@@ -34,11 +35,16 @@ const goal = 1;
     {finished && <p>I finished this tutorial!</p>}
 
 {goal === 1 ? <p>My goal is to finish in 1 days.</p> : <p>My goal is not 3 days.</p>}
+
+<p>My skills are:</p>
+<ul>
+    {skills.map((skill)=> <li class="skill">{skill}</li>)}
+</ul>
 </body>
 </html>
 
 
-<style>
+<style define:vars={{skillColor}}>
 
     #about{
         flex: auto;
@@ -50,4 +56,9 @@ const goal = 1;
         margin-left: 20px;
         margin-top: 0%;
     }
+    
+    .skill {
+        color: var(--skillColor);
+        font-weight: bold;
+  }
 </style>
