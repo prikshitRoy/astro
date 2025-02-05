@@ -1,6 +1,7 @@
 ---
 import astroLogo from '../assets/astro.svg';
 import background from '../assets/background.svg';
+import Navigation from '../components/Navigation.astro';
 ---
 
 <div id="container">
@@ -8,7 +9,7 @@ import background from '../assets/background.svg';
 	
 	
 	<img id="background" src={background.src} alt="" fetchpriority="high" />
-	<a href="/about/">About</a>
+	<Navigation/>
 	<main>
 		<section id="hero">
 			<a href="https://astro.build"
